@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 14:48:02 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/17 14:48:07 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:28:14 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push_b(t_stack **stackA, t_stack **stackB)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = (*stackA)->next;
 	if (*stackA)
@@ -31,13 +31,13 @@ void	push_b(t_stack **stackA, t_stack **stackB)
 			(*stackB)->next = NULL;
 			*stackA = temp;
 		}
-		write(1,"pb\n",3);
+		write(1, "pb\n", 3);
 	}
 }
 
 void	push_a(t_stack **stackA, t_stack **stackB)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = (*stackB)->next;
 	if (*stackB)
@@ -54,6 +54,6 @@ void	push_a(t_stack **stackA, t_stack **stackB)
 			(*stackA)->next = NULL;
 			*stackB = temp;
 		}
-		write(1,"pa\n",3);
+		write(1, "pa\n", 3);
 	}
 }

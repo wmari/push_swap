@@ -6,16 +6,15 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 14:48:18 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/17 14:48:23 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:31:12 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../header/push_swap.h"
 
 void	rrota(t_stack **stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	if ((*stack)->next)
 	{
@@ -31,7 +30,7 @@ void	rrota(t_stack **stack)
 
 void	rrotb(t_stack **stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	if ((*stack)->next)
 	{

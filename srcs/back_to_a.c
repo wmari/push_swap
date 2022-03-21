@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 16:15:57 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:26 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:32:47 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long int	find_start_b(t_stack **stack, int bit)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = *stack;
 	while (temp)
@@ -26,9 +26,9 @@ long int	find_start_b(t_stack **stack, int bit)
 	return (-1);
 }
 
-int		still_back(t_stack **stack, int bit)
+int	still_back(t_stack **stack, int bit)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = *stack;
 	while (temp)
@@ -43,6 +43,7 @@ int		still_back(t_stack **stack, int bit)
 void	back_to_a(t_stack **stacka, t_stack **stackb, int bit)
 {
 	long int	start;
+
 	start = find_start_b(stackb, bit);
 	if (test_if_order(stacka, stackb))
 	{

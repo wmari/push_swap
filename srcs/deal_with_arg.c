@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:54:09 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 13:46:45 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:30:32 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	check_void(char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (argv[i])
@@ -81,12 +81,12 @@ int	check_double(t_list *list)
 	return (0);
 }
 
-int check_long(t_stack *stack)
+int	check_long(t_stack *stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = stack;
-	while(temp)
+	while (temp)
 	{
 		if (temp->value > 2147483647 || temp->value < -2147483648)
 			return (1);

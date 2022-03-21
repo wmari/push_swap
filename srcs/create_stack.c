@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 13:45:23 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 14:37:00 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:27:26 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack	*create_elem(long int val)
 {
-	t_stack *elem;
+	t_stack	*elem;
 
 	elem = malloc(sizeof(t_stack));
 	elem->value = val;
@@ -25,7 +25,7 @@ t_stack	*create_elem(long int val)
 
 void	add_back(t_stack *stack, t_stack *elem)
 {
-	t_stack *copy;
+	t_stack	*copy;
 
 	if (stack == NULL)
 	{
@@ -40,6 +40,7 @@ void	add_back(t_stack *stack, t_stack *elem)
 		copy->next = elem;
 	}
 }
+
 void	free_everything(t_list *list, t_stack *stack)
 {
 	if (stack)
@@ -48,9 +49,9 @@ void	free_everything(t_list *list, t_stack *stack)
 	free(list);
 }
 
-t_stack *createstack(char **argv)
+t_stack	*createstack(char **argv)
 {
-	t_stack *stack;
+	t_stack	*stack;
 	size_t	i;
 	t_list	*list;
 	t_stack	*elem;

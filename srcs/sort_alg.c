@@ -6,13 +6,13 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:52:31 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 17:00:34 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:29:50 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int		notsorted(t_stack **stacka, t_stack **stackb)
+int	notsorted(t_stack **stacka, t_stack **stackb)
 {
 	t_stack	*temp;
 
@@ -28,7 +28,7 @@ int		notsorted(t_stack **stacka, t_stack **stackb)
 	return (0);
 }
 
-int			test_if_order(t_stack **stacka, t_stack **stackb)
+int	test_if_order(t_stack **stacka, t_stack **stackb)
 {
 	t_stack	*temp;
 
@@ -56,7 +56,7 @@ int			test_if_order(t_stack **stacka, t_stack **stackb)
 
 long int	find_start(t_stack **stacka, int bit)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = *stacka;
 	while (temp)
@@ -68,9 +68,9 @@ long int	find_start(t_stack **stacka, int bit)
 	return (-1);
 }
 
-int		still_push(t_stack **stacka, t_stack **stackb, int bit)
+int	still_push(t_stack **stacka, t_stack **stackb, int bit)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	temp = *stacka;
 	if (!notsorted(stacka, stackb))

@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 13:37:16 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 14:24:56 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:31:49 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	free_stack(t_stack *stack)
 
 void	harmonized(t_stack **stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 	t_stack	*parkour;
 	int		count;
 
@@ -43,8 +43,8 @@ void	harmonized(t_stack **stack)
 
 int	main(int argc, char **argv)
 {
-	t_stack *stacka;
-	t_stack *stackb;
+	t_stack	*stacka;
+	t_stack	*stackb;
 
 	if (deal_with_arg(argc, argv))
 	{
