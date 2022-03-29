@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:54:09 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 17:30:32 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 17:43:01 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,10 @@ int	check_long(t_stack *stack)
 	return (0);
 }
 
-int	deal_with_arg(int argc, char **argv)
+int	deal_with_arg(char **argv)
 {
 	t_list	*list;
 
-	if (argc == 1)
-		return (1);
 	if (check_valid(argv))
 		return (1);
 	if (check_void(argv))

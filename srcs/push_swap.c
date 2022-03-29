@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 13:37:16 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 13:39:26 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 18:27:11 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,11 @@ int	main(int argc, char **argv)
 	t_stack	*stacka;
 	t_stack	*stackb;
 
-	if (deal_with_arg(argc, argv))
+	if (argc == 1 || no_arg(argv))
+		return (0);
+	if (deal_with_arg(argv))
 	{
-		if (argc != 1)
-			write(2, "Error\n", 6);
-		else
-			write(1, "\n", 1);
+		write(2, "Error\n", 6);
 		return (0);
 	}
 	stacka = createstack(argv);

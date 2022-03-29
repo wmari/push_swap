@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:15:57 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 16:46:47 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 18:34:45 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,20 @@ int		lowest_in_stack(t_stack **stack, long int val)
 		if (val > temp->harm_value)
 			return (0);
 		temp = temp->next;
+	}
+	return (1);
+}
+
+int		no_arg(char **arg)
+{
+	int i;
+
+	i = 1;
+	while (arg[i])
+	{
+		if (arg[i][0] != '\0')
+			return (0);
+		i++;
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 14:52:53 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 16:47:33 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 18:24:37 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 	size_t		nb_elem;
 }t_list;
 
-int		deal_with_arg(int argc, char **argv);
+int		deal_with_arg(char **argv);
 int		check_long(t_stack *stack);
 t_list	*parsing(char **argv);
 void	push_a(t_stack **stackA, t_stack **stackB);
@@ -58,4 +58,5 @@ void	id_sarra(t_stack **stack);
 void	identity_cont(t_stack **stack);
 int		highest_in_stack(t_stack **stack, long int val);
 int		lowest_in_stack(t_stack **stack, long int val);
+int		no_arg(char **arg);
 #endif
