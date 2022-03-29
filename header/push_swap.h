@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 14:52:53 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 16:50:25 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:47:33 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,12 @@ void	back_to_a(t_stack **stacka, t_stack **stackb, int bit);
 int		test_if_order(t_stack **stacka, t_stack **stackb);
 void	smart_back(t_stack **stacka, t_stack **stackb, int bit);
 void	back_to_start_b(t_stack **stack, long int start);
+void	id_sa(t_stack **stack);
+void	id_ra(t_stack **stack);
+void	id_rra(t_stack **stack);
+void	id_sara(t_stack **stack);
+void	id_sarra(t_stack **stack);
+void	identity_cont(t_stack **stack);
+int		highest_in_stack(t_stack **stack, long int val);
+int		lowest_in_stack(t_stack **stack, long int val);
 #endif

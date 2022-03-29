@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 13:46:34 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 17:26:11 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 14:07:25 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ void	fill_list(t_list **list, char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			if ((argv[i][j] > '0' && argv[i][j] < '9') || argv[i][j] == '-')
+			if ((argv[i][j] >= '0' && argv[i][j] <= '9') || argv[i][j] == '-')
 			{
 				(*list)->tab[elem++] = ft_atoi(&argv[i][j]);
 				if (argv[i][j] == '-')
 					j++;
-				while (argv[i][j] > '0' && argv[i][j] < '9')
+				while (argv[i][j] >= '0' && argv[i][j] <= '9')
 					j++;
 			}
 			if (argv[i][j] == ' ')
@@ -75,7 +75,7 @@ int	nb_elem(char *argv)
 	trig = 0;
 	while (argv[i])
 	{
-		if (argv[i] > '0' && argv[i] < '9' && trig == 0)
+		if (argv[i] >= '0' && argv[i] <= '9' && trig == 0)
 			trig = 1;
 		if ((argv[i] < '0' || argv[i] > '9') && trig == 1)
 		{

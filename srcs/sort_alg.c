@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:52:31 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 17:29:50 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:18:56 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void	sort_stack(t_stack **stacka, t_stack **stackb)
 	long int	start;
 
 	bit = 0;
+	identity_cont(stacka);
 	while (notsorted(stacka, stackb))
 	{
 		start = find_start(stacka, bit);
@@ -97,7 +98,7 @@ void	sort_stack(t_stack **stacka, t_stack **stackb)
 		{
 			while (still_push(stacka, stackb, bit))
 				smart_push(stacka, stackb, bit);
-			if (bit > 0)
+			if (bit > 0 && notsorted(stacka, stackb))
 				back_to_start(stacka, start);
 			bit++;
 		}
