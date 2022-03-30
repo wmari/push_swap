@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:15:57 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 18:34:45 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/30 09:50:20 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	identity_cont(t_stack **stack)
 	id_sarra(stack);
 }
 
-int		highest_in_stack(t_stack **stack, long int val)
+int	highest_in_stack(t_stack **stack, long int val)
 {
 	t_stack	*temp;
 
@@ -35,7 +35,7 @@ int		highest_in_stack(t_stack **stack, long int val)
 	return (1);
 }
 
-int		lowest_in_stack(t_stack **stack, long int val)
+int	lowest_in_stack(t_stack **stack, long int val)
 {
 	t_stack	*temp;
 
@@ -49,9 +49,9 @@ int		lowest_in_stack(t_stack **stack, long int val)
 	return (1);
 }
 
-int		no_arg(char **arg)
+int	no_arg(char **arg)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (arg[i])

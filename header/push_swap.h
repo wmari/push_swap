@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 14:52:53 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 18:24:37 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/30 09:54:35 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define PUSH_SWAP_H
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_stack
 {
-	long int				value;
+	long int		value;
 	long int		harm_value;
 	struct s_stack	*next;
 }t_stack;
@@ -59,4 +58,5 @@ void	identity_cont(t_stack **stack);
 int		highest_in_stack(t_stack **stack, long int val);
 int		lowest_in_stack(t_stack **stack, long int val);
 int		no_arg(char **arg);
+void	identity(t_stack **stacka, t_stack **stackb);
 #endif

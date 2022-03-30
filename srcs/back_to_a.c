@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 16:15:57 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/29 13:54:09 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/30 09:37:04 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ void	back_to_a(t_stack **stacka, t_stack **stackb, int bit)
 		if (bit > 1)
 			back_to_start_b(stackb, start);
 	}
-//	sapapara(stacka, stackb);
+	identity(stacka, stackb);
 }
