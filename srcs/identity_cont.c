@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:15:57 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/30 09:50:20 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/30 10:26:33 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	highest_in_stack(t_stack **stack, long int val)
 {
 	t_stack	*temp;
 
+	if (!(*stack))
+		return (0);
 	temp = *stack;
 	while (temp)
 	{
@@ -39,6 +41,8 @@ int	lowest_in_stack(t_stack **stack, long int val)
 {
 	t_stack	*temp;
 
+	if (!(*stack))
+		return (0);
 	temp = *stack;
 	while (temp)
 	{
