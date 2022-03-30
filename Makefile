@@ -6,7 +6,7 @@
 #    By: wmari <wmari@42.student.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 14:52:16 by wmari             #+#    #+#              #
-#    Updated: 2022/03/30 11:12:39 by wmari            ###   ########.fr        #
+#    Updated: 2022/03/30 11:23:52 by wmari            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ $(NAME)	:	$(OBJS)
 
 clean	:
 			rm -f $(OBJS)
+			rm -rf objs
 
 fclean	:	clean
 			rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: wmari <wmari@42.student.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 13:45:23 by wmari             #+#    #+#             */
-/*   Updated: 2022/03/21 17:27:26 by wmari            ###   ########.fr       */
+/*   Updated: 2022/03/30 11:20:05 by wmari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_stack	*create_elem(long int val)
 	t_stack	*elem;
 
 	elem = malloc(sizeof(t_stack));
+	if (elem == NULL)
+		return (NULL);
 	elem->value = val;
 	elem->harm_value = 0;
 	elem->next = NULL;
@@ -49,6 +51,12 @@ void	free_everything(t_list *list, t_stack *stack)
 	free(list);
 }
 
+void	free_list(t_list *list)
+{
+	free(list->tab);
+	free(list);
+}
+
 t_stack	*createstack(char **argv)
 {
 	t_stack	*stack;
@@ -61,6 +69,8 @@ t_stack	*createstack(char **argv)
 		return (NULL);
 	i = 1;
 	stack = create_elem(list->tab[0]);
+	if (stack == NULL)
+		return (NULL);
 	while (i < list->nb_elem)
 	{
 		elem = create_elem(list->tab[i]);
@@ -72,7 +82,6 @@ t_stack	*createstack(char **argv)
 		add_back(stack, elem);
 		i++;
 	}
-	free(list->tab);
-	free(list);
+	free_list(list);
 	return (stack);
 }
